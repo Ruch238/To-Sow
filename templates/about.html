@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block body %}
+    <style>
+        
+
+        .card {
+            margin: 50px auto;
+            float: right;
+            width: 50rem;
+            background: rgba(246, 242, 242, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(70, 71, 75, 0.37);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 10px;
+            border: 7px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .responsive {
+            width: 75%;
+            height: auto;
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            .card {
+                width: 100%;
+                margin: 0
+            }
+        }
+
+        .btn {
+            width: 10rem;
+            height: 10rem;
+        }
+    </style>
+
+    <title>ToSow</title>
+</head>
+
+    <main class="d-flex flex-wrap justify-content-evenly">
+        <div class="card p-1 mx-8 my-6 custom-card">
+            <div class="card-body text-center">
+                <h4 class="card-title"><b>IMPROVING AGRICULTURE, IMPROVING LIVES, CULTIVATING CROPS TO MAKE FARMERS
+                    INCREASE
+                    PROFIT.</b></h4>
+                <br>
+                <h5> We use state-of-the-art machine learning technologies
+                    to help you guide through the entire farming process.
+                    Make informed decisions to understand the demographics of your area,
+                    understand the factors that affect your crop and
+                    keep them healthy for a super awesome successful yield.</h5><br>
+
+
+                <img src="https://harvestify.herokuapp.com/static/images/core.jpg" alt="Nature" class="responsive">
+            </div>
+        </div>
+    </main>
+</html>
+
+
+{% endblock body %}

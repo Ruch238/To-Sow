@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block body %}
+  <style>
+    .custom-card {
+      width: 19rem;
+      background-color: #1daa64ef;
+      color: white;
+      height: max-content;
+    }
+
+    @media only screen and (max-width: 1050px) {
+      .custom-card {
+        margin: 1rem !important;
+      }
+    }
+
+    @media only screen and (max-width: 450px) {
+      .custom-card {
+        width: 95%;
+        margin: 0.5rem 0 !important;
+      }
+    }
+  </style>
+
+  <title>ToSow</title>
+</head>
+
+
+  <br>
+
+  <main class="d-flex flex-wrap justify-content-evenly">
+
+    <div class="card p-2 mx-5 my-3 custom-card">
+      <img src="/static/darshan.jpeg" alt="Sample photo" class="card-img-top" style=" width:18rem !important;
+      height: 260px ;
+      margin: 0 auto 1em auto; ">
+      <div class="card-body text-center">
+        <h4 class="card-title"><b>Darshankumar Mohite</b></h4>
+        <h6 class="card-text"><em> Vidyalankar Institute of Technology</em></h6>
+        <p class="card-text"><em>TE Electronics - A</em></p>
+
+      </div>
+    </div>
+
+    <div class="card p-2 mx-5 my-3 custom-card " >
+      <img src="/static/atharva.JPG" alt="Sample photo" class="card-img-top" style="width:18rem !important;
+      height: 260px ;
+      margin: 0 auto 1em auto;">
+      <div class="card-body text-center">
+        <h4 class="card-title"><b>Atharva Sohani</b></h4>
+        <h6 class="card-text"><em> Vidyalankar Institute of Technology</em></h6>
+        <p class="card-text"><em>TE Electronics - A</em></p>
+
+      </div>
+    </div>
+    <div class="card p-2 mx-5 my-3 custom-card" >
+      <img src="/static/rucha.jpeg" alt="Sample photo" class="card-img-top" style="width: 18rem !important;
+      height:260px ;
+      margin: 0 auto 1em auto;">
+      <div class="card-body text-center">
+        <h4 class="card-title"><b>Rucha Patil</b></h4>
+        <h6 class="card-text"><em> Vidyalankar Institute of Technology</em></h6>
+        <p class="card-text"><em>TE Electronics - A</em></p>
+
+      </div>
+    </div>
+    <div class="card p-2 mx-5 my-3 custom-card">
+      <img src="/static/sunjanaa.jpg" alt="Sample photo" class="card-img-top" style="width: 18rem !important;
+      height: 250px ;
+      margin: 0 auto 1em auto;">
+      <div class="card-body text-center">
+        <h4 class="card-title"><b>Sunjanaa Katke</b></h4>
+        <h6 class="card-text"><em> Vidyalankar Institute of Technology</em></h6>
+        <p class="card-text"><em>TE Electronics - A</em></p>
+
+      </div>
+    </div>
+
+
+  </main>
+</html>
+
+{% endblock body %}

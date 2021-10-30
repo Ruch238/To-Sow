@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block body %}
+  <style>
+    
+
+
+    .card {
+      margin: 30px auto;
+      width: 25rem;
+      background: rgba(246, 242, 242, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(70, 71, 75, 0.37);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border-radius: 10px;
+      border: 7px solid rgba(255, 255, 255, 0.18);
+    }
+
+    
+      @media only screen and (max-width: 600px) {
+        .card {
+          width: 100%;
+          margin: 0
+        }
+      }
+
+      
+  </style>
+
+  <title>ToSow</title>
+</head>
+
+
+
+
+  <center>
+    
+    <div class="card">
+      <div class="card-body px-3">
+        <h4 class="card-title"><b>ToSow - Crop Predictor</b></h4>
+        <h6>Please enter the details of the soil:</h6>
+        <form action="{% url 'result' %}">
+
+          {% csrf_token %}
+
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Nitrogen (ppm) </label>
+            <input type="text" class="form-control" name="N" id="formGroupExampleInput"
+              placeholder="Enter value of Nitrogen" value={{temp.N}}>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Phosphorus (ppm)</label>
+            <input type="text" class="form-control" name="P" id="formGroupExampleInput2"
+              placeholder="Enter value of Phosphorus" value={{temp.P}}>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"> Potassium (ppm) </label>
+            <input type="text" class="form-control" name="K" id="formGroupExampleInput"
+              placeholder="Enter value of Potassium" value={{temp.K}}>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Temperature (C) </label>
+            <input type="text" class="form-control" name="temperature" id="formGroupExampleInput2"
+              placeholder="Enter temperature" value={{temp.temperature}}>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">PH level</label>
+            <input type="text" class="form-control" name="ph" id="formGroupExampleInput" placeholder="Enter ph value"
+              value={{temp.ph}}>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Rainfall (mm) </label>
+            <input type="text" class="form-control" name="rainfall" id="formGroupExampleInput2"
+              placeholder="Enter amount of rainfall" value={{temp.rainfall}}>
+          </div>
+
+
+          <div class="d-flex justify-content-center mx-auto mt-3">
+            <button type="submit" class="btn" style="background-color:#1daa63 ; color:white" >Submit </button>
+          </div>
+      </div>
+      </form>
+    </div>
+    <br>
+
+    </div>
+  </center>
+</html>
+
+
+
+
+{% endblock body %}
